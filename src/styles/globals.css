@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: optional;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url(/fonts/Inter-roman.var.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: optional;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url(/fonts/Inter-italic.var.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Cal Sans";
+  font-style: normal;
+  font-display: optional;
+  font-weight: 600;
+  src: url(/fonts/CalSans-SemiBold.woff2) format("woff2");
+}
+
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
+}
+
+html {
+  min-width: 360px;
+  scroll-behavior: smooth;
+}
+
+#__next {
+  @apply bg-gray-50 dark:bg-gray-900;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* https://seek-oss.github.io/capsize/ */
+.capsize::before {
+  content: "";
+  margin-bottom: -0.098em;
+  display: table;
+}
+
+.capsize::after {
+  content: "";
+  margin-top: -0.219em;
+  display: table;
+}
+
+.skip-nav {
+  @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8;
+}
+
+#skip {
+  scroll-margin-top: 1.125rem;
+}
