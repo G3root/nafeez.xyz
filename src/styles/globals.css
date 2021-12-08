@@ -3,28 +3,20 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Inter var";
+  font-family: 'Inter var';
   font-weight: 100 900;
   font-display: optional;
   font-style: normal;
-  font-named-instance: "Regular";
-  src: url(/fonts/Inter-roman.var.woff2) format("woff2");
+  font-named-instance: 'Regular';
+  src: url(/fonts/Inter-roman.var.woff2) format('woff2');
 }
 @font-face {
-  font-family: "Inter var";
+  font-family: 'Inter var';
   font-weight: 100 900;
   font-display: optional;
   font-style: italic;
-  font-named-instance: "Italic";
-  src: url(/fonts/Inter-italic.var.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Cal Sans";
-  font-style: normal;
-  font-display: optional;
-  font-weight: 600;
-  src: url(/fonts/CalSans-SemiBold.woff2) format("woff2");
+  font-named-instance: 'Italic';
+  src: url(/fonts/Inter-italic.var.woff2) format('woff2');
 }
 
 ::selection {
@@ -33,7 +25,6 @@
 }
 
 html {
-  min-width: 360px;
   scroll-behavior: smooth;
 }
 
@@ -46,13 +37,13 @@ html {
 
 /* https://seek-oss.github.io/capsize/ */
 .capsize::before {
-  content: "";
+  content: '';
   margin-bottom: -0.098em;
   display: table;
 }
 
 .capsize::after {
-  content: "";
+  content: '';
   margin-top: -0.219em;
   display: table;
 }
