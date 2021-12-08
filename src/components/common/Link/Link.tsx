@@ -23,7 +23,7 @@ export function Link({
       <a
         href={href}
         className={clsx(
-          'underline hover:text-gray-800 dark:hover:text-gray-200 transition-all',
+          'underline hover:text-gray-800 dark:hover:text-gray-200 font-bold transition-all',
           className
         )}
         {...rest}
@@ -36,7 +36,7 @@ export function Link({
     <NextLink href={href}>
       <a
         className={clsx(
-          'underline hover:text-gray-800 dark:hover:text-gray-200 transition-all',
+          'underline hover:text-gray-800 dark:hover:text-gray-200 font-bold transition-all',
           className
         )}
         {...rest}
