@@ -1,13 +1,13 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
-import { KBarProvider } from 'kbar';
+import { KbarModal } from '@/components/common';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
-      <KBarProvider>
+      <KbarModal>
         <Component {...pageProps} />
-      </KBarProvider>
+      </KbarModal>
     </ThemeProvider>
   );
 }
