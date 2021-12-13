@@ -434,6 +434,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tailwindcss/line-clamp@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@tailwindcss/line-clamp@npm:0.3.0"
+  peerDependencies:
+    tailwindcss: ">=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1"
+  checksum: 9b1d306d1001f6f297ef555cfa5a9e69bd1643a982d0f9dc5a929a2e1afa099ae8844fc02ba3395af229d00bab9c40d1bab79872ca154d9e0e607d49d043b524
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:1":
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
@@ -3858,6 +3867,7 @@ __metadata:
   resolution: "personal-site@workspace:."
   dependencies:
     "@prisma/client": ^3.6.0
+    "@tailwindcss/line-clamp": ^0.3.0
     "@types/node": 16.11.12
     "@types/react": 17.0.37
     autoprefixer: ^10.4.0
