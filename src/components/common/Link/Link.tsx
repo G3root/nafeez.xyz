@@ -18,29 +18,18 @@ export function Link({
   className,
   ...rest
 }: ILinkProps) {
+  const className_ =
+    'underline decoration-wavy hover:text-gray-800 dark:hover:text-gray-200 font-bold transition-all';
   if (isExternal) {
     return (
-      <a
-        href={href}
-        className={clsx(
-          'underline hover:text-gray-800 dark:hover:text-gray-200 font-bold transition-all',
-          className
-        )}
-        {...rest}
-      >
+      <a href={href} className={clsx(className_, className)} {...rest}>
         {children}
       </a>
     );
   }
   return (
     <NextLink href={href}>
-      <a
-        className={clsx(
-          'underline hover:text-gray-800 dark:hover:text-gray-200 font-bold transition-all',
-          className
-        )}
-        {...rest}
-      >
+      <a className={clsx(className_, className)} {...rest}>
         {children}
       </a>
     </NextLink>
