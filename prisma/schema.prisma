@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  shadowDatabaseUrl    = env("SHADOW_DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+model Guestbook {
+  id        Int      @id @default(autoincrement())
+  email     String   @db.VarChar(256)
+  body      String
+  createdBy String   @db.VarChar(256)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BookmarkCategory {
+  id        Int        @id @default(autoincrement())
+  title     String     @db.VarChar(50)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  Bookmarks Bookmark[]
+}
+
+model Bookmark {
+  id          Int              @id @default(autoincrement())
+  title       String
+  link        String
+  description String?          @db.VarChar(100)
+  categoryId  Int
+  category    BookmarkCategory @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+}
+
+model ProjectCategory {
+  id        Int       @id @default(autoincrement())
+  title     String    @db.VarChar(50)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  Projects  Project[]
+}
+
+model Project {
+  id          Int             @id @default(autoincrement())
+  title       String
+  link        String
+  description String?         @db.VarChar(100)
+  iconName    String          @db.VarChar(50)
+  categoryId  Int
+  category    ProjectCategory @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+}
