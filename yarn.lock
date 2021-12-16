@@ -2795,6 +2795,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"goober@npm:^2.0.35":
+  version: 2.1.1
+  resolution: "goober@npm:2.1.1"
+  peerDependencies:
+    csstype: ^2.6.2
+  checksum: 19a6622aea23b915bbf48c50389e9a1755b80cd3735dad1e22a1fe5c343f9d22b69269cc1dd37fc0548671c9c7de062d4ad56e5342c598cbc4467e1ce92bc133
+  languageName: node
+  linkType: hard
+
 "graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.2.6":
   version: 4.2.8
   resolution: "graceful-fs@npm:4.2.8"
@@ -4324,6 +4333,7 @@ __metadata:
     prisma: ^3.6.0
     react: 17.0.2
     react-dom: 17.0.2
+    react-hot-toast: ^2.1.1
     react-icons: ^4.3.1
     swr: ^1.1.0
     tailwindcss: ^3.0.1
@@ -4625,6 +4635,18 @@ __metadata:
   peerDependencies:
     react: 17.0.2
   checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
+  languageName: node
+  linkType: hard
+
+"react-hot-toast@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "react-hot-toast@npm:2.1.1"
+  dependencies:
+    goober: ^2.0.35
+  peerDependencies:
+    react: ">=16"
+    react-dom: ">=16"
+  checksum: 029d375d50a937143d21d71c11d4ad00dbb58a6ca12a50378a7bd80fe294821def6f7a5b9a53404d31230d1fed5246453a73b9f90bc85811036e53b802ad790f
   languageName: node
   linkType: hard
 
