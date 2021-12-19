@@ -7,5 +7,7 @@ namespace NodeJS {
     GITHUB_SECRET: string;
     TWITTER_CLIENT_ID: string;
     TWITTER_CLIENT_SECRET: string;
+    NEXTAUTH_URL: string;
+    VERCEL_URL: string;
   }
 }
