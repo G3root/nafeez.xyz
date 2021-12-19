@@ -21,5 +21,11 @@ export default NextAuth({
       clientId: TWITTER_CLIENT_ID,
       clientSecret: TWITTER_CLIENT_SECRET
     })
-  ]
+  ],
+  session: {
+    strategy: 'jwt'
+  },
+  jwt: {
+    secret: NEXT_AUTH_SECRET
+  }
 });
