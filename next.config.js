@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['storage.opensea.io'],
+    domains: ['storage.opensea.io','assets.poap.xyz'],
   },
 }
