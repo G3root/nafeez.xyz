@@ -1,16 +1,13 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-datasource db {
-  provider             = "mysql"
-  url                  = env("DATABASE_URL")
-  shadowDatabaseUrl    = env("SHADOW_DATABASE_URL")
-  referentialIntegrity = "prisma"
+generator client {
+  provider = "prisma-client-js"
 }
 
-generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Guestbook {
@@ -54,7 +51,6 @@ model Project {
   title       String
   link        String
   description String?         @db.VarChar(100)
-  iconName    String          @db.VarChar(50)
   categoryId  Int
   category    ProjectCategory @relation(fields: [categoryId], references: [id])
   createdAt   DateTime        @default(now())
