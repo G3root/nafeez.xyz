@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { NavItem } from './NavItem';
-import { KbarButton } from './KbarButton';
 
 export interface INavbarProps {}
 
@@ -22,9 +21,8 @@ export function Navbar(props: INavbarProps) {
           <NavItem href="/guestbook" text="Guestbook" />
           <NavItem href="/projects" text="Projects" />
           <NavItem href="/bookmarks" text="Bookmarks" />
-          <NavItem href="/nft-gallery" text="NFT Gallery" />
+          <NavItem href="/nft-gallery" text="NFT gallery" />
         </div>
-        <KbarButton />
       </nav>
     </div>
   );
