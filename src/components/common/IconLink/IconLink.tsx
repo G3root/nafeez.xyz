@@ -11,13 +11,7 @@ export interface IIconLinkProps
 
 export function IconLink({ children, className, ...rest }: IIconLinkProps) {
   return (
-    <a
-      className={clsx(
-        'rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 transition-all p-2',
-        className
-      )}
-      {...rest}
-    >
+    <a className={clsx('rounded-lg  transition-all p-2', className)} {...rest}>
       {children}
     </a>
   );

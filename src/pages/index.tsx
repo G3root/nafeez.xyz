@@ -24,16 +24,29 @@ const Home: NextPage = () => {
             .
           </p>
           <div className="flex items-center mt-5 space-x-4">
-            <IconLink href="https://github.com/G3root">
-              <FiGithub className="h-5 w-5" />
-            </IconLink>
-            <IconLink href="https://www.instagram.com/nafees_nazik.21/">
-              <FiInstagram className="h-5 w-5" />
-            </IconLink>
-            <IconLink href="https://twitter.com/nfs__21">
+            <IconLink
+              className="text-blue-600 dark:text-blue-400 hover:bg-blue-200 dark:hover:bg-blue-800"
+              href="https://twitter.com/nfs__21"
+            >
               <FiTwitter className="h-5 w-5" />
             </IconLink>
-            <IconLink href="mailto:nafeesnazik21@gmail.com">
+            <IconLink
+              className="text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800"
+              href="https://github.com/G3root"
+            >
+              <FiGithub className="h-5 w-5" />
+            </IconLink>
+            <IconLink
+              className="text-red-600 dark:text-red-400 hover:bg-red-200 dark:hover:bg-red-800"
+              href="https://www.instagram.com/nafees_nazik.21/"
+            >
+              <FiInstagram className="h-5 w-5" />
+            </IconLink>
+
+            <IconLink
+              className="text-yellow-600 dark:text-yellow-400 hover:bg-yellow-200 dark:hover:bg-yellow-800"
+              href="mailto:nafeesnazik21@gmail.com"
+            >
               <FiMail className="h-5 w-5" />
             </IconLink>
           </div>
