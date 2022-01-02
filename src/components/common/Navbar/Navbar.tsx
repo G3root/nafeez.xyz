@@ -2,6 +2,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import { NavItem } from './NavItem';
 import { ThemeDropdown } from './ThemeDropdown';
+import { MobileNav } from './MobileNav';
 
 export interface INavbarProps {}
 
@@ -17,6 +18,7 @@ export function Navbar(props: INavbarProps) {
             N
           </a>
         </Link>
+        <MobileNav />
         <div className="ml-[-0.60rem]">
           <NavItem href="/" text="Home" />
           <NavItem href="/guestbook" text="Guestbook" />
