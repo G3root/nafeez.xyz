@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { NavItem } from './NavItem';
+import { ThemeDropdown } from './ThemeDropdown';
 
 export interface INavbarProps {}
 
@@ -12,7 +13,7 @@ export function Navbar(props: INavbarProps) {
           Skip to content
         </a>
         <Link href="/">
-          <a className="font-semibold px-2 py-1 rounded-lg text-3xl hover:bg-gray-200 dark:hover:bg-gray-800 transition-all">
+          <a className="font-semibold px-2 py-1 md:block hidden rounded-lg text-3xl hover:bg-gray-200 dark:hover:bg-gray-800 transition-all">
             N
           </a>
         </Link>
@@ -23,6 +24,8 @@ export function Navbar(props: INavbarProps) {
           <NavItem href="/bookmarks" text="Bookmarks" />
           <NavItem href="/nft-gallery" text="NFT gallery" />
         </div>
+
+        <ThemeDropdown />
       </nav>
     </div>
   );
