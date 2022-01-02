@@ -29,5 +29,11 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/line-clamp'), require('@tailwindcss/forms'),],
+  plugins: [require('@tailwindcss/line-clamp'), require('@tailwindcss/forms'),require("tailwindcss-radix")({
+    // Default: `radix`
+    variantPrefix: "rdx",
+    // Default: `false`
+    // Cannot be enabled in combination with `variantPrefix: ""`
+    skipAttributeNames: false,
+  }),],
 }
