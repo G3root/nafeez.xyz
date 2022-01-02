@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
 import clsx from 'clsx';
 import NextLink from 'next/link';
+import * as Toolbar from '@radix-ui/react-toolbar';
 export interface INavItemProps {
   href: string;
   text: string;
@@ -14,8 +13,8 @@ export function NavItem({ href, text }: INavItemProps) {
   const isActive = router.asPath === href;
 
   return (
-    <NextLink href={href}>
-      <a
+    <NextLink passHref href={href}>
+      <Toolbar.Link
         className={clsx(
           isActive
             ? 'font-semibold text-gray-800 dark:text-gray-200'
@@ -24,7 +23,7 @@ export function NavItem({ href, text }: INavItemProps) {
         )}
       >
         <span className="capsize">{text}</span>
-      </a>
+      </Toolbar.Link>
     </NextLink>
   );
 }

@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { useTheme } from 'next-themes';
 import { FiMonitor, FiMoon, FiSun } from 'react-icons/fi';
+import * as Toolbar from '@radix-ui/react-toolbar';
 export interface IThemeDropdownProps {}
 
 const states = [
@@ -43,13 +44,15 @@ export function ThemeDropdown(props: IThemeDropdownProps) {
   };
   return (
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger
-        aria-label="Switch theme"
-        className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
-      >
-        <FiMoon aria-hidden className="h-5 w-5 dark:hidden block" />
-        <FiSun aria-hidden className="h-5 w-5 dark:block hidden" />
-      </DropdownMenu.Trigger>
+      <Toolbar.Button asChild>
+        <DropdownMenu.Trigger
+          aria-label="Switch theme"
+          className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+        >
+          <FiMoon aria-hidden className="h-5 w-5 dark:hidden block" />
+          <FiSun aria-hidden className="h-5 w-5 dark:block hidden" />
+        </DropdownMenu.Trigger>
+      </Toolbar.Button>
       <DropdownMenu.Content
         className="w-36 bg-gray-50 dark:bg-gray-800 rounded-md p-1 text-sm font-medium shadow-lg overflow-hidden"
         sideOffset={5}

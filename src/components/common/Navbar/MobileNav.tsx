@@ -1,5 +1,7 @@
 import * as React from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
+import * as Toolbar from '@radix-ui/react-toolbar';
+
 import {
   FiHome,
   FiEdit3,
@@ -61,12 +63,14 @@ export function MobileNav(props: IMobileNavProps) {
   ));
   return (
     <Dialog.Root>
-      <Dialog.Trigger
-        aria-label="Toggle menu"
-        className="w-9 h-9  md:hidden flex items-center justify-center   bg-transparent"
-      >
-        <FiMenu aria-hidden className="h-5 w-5 " />
-      </Dialog.Trigger>
+      <Toolbar.Button asChild>
+        <Dialog.Trigger
+          aria-label="Toggle menu"
+          className="w-9 h-9  md:hidden flex items-center justify-center   bg-transparent"
+        >
+          <FiMenu aria-hidden className="h-5 w-5 " />
+        </Dialog.Trigger>
+      </Toolbar.Button>
       <Dialog.Portal>
         <Dialog.Overlay className="absolute inset-0 bg-gray-800 bg-opacity-75 " />
         <Dialog.Content className="fixed top-0 bottom-0 w-72 left-0">
