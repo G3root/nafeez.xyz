@@ -57,7 +57,6 @@ export default async function handler(
           id: result.data.id
         }
       });
-      console.log(deleteEntry);
 
       return res.status(200).json({ success: true });
     } catch (error) {
