@@ -24,7 +24,6 @@ export function Navbar(props: INavbarProps) {
             <NavItem href="/" text="Home" />
             <NavItem href="/guestbook" text="Guestbook" />
             <NavItem href="/projects" text="Projects" />
-            <NavItem href="/bookmarks" text="Bookmarks" />
             <NavItem href="/nft-gallery" text="NFT gallery" />
           </div>
 

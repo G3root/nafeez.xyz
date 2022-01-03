@@ -2,15 +2,7 @@ import * as React from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import * as Toolbar from '@radix-ui/react-toolbar';
 
-import {
-  FiHome,
-  FiEdit3,
-  FiStar,
-  FiBookmark,
-  FiAward,
-  FiMenu,
-  FiX
-} from 'react-icons/fi';
+import { FiHome, FiEdit3, FiStar, FiAward, FiMenu, FiX } from 'react-icons/fi';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
@@ -28,11 +20,6 @@ const items = [
     name: 'Projects',
     url: '/projects',
     icon: <FiStar aria-hidden className="mx-2" />
-  },
-  {
-    name: 'Bookmarks',
-    url: '/bookmarks',
-    icon: <FiBookmark aria-hidden className="mx-2" />
   },
   {
     name: 'NFT gallery',
