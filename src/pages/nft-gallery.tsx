@@ -15,7 +15,13 @@ type NftMetadata = {
 
 export const getStaticProps = async () => {
   const nftReq = await fetch(
-    'https://api.opensea.io/api/v1/assets?owner=0xD2eCE15856813709Dd181A55c9fC82059Fdb2E2c&order_direction=desc&offset=0&limit=20'
+    'https://api.opensea.io/api/v1/assets?owner=0xD2eCE15856813709Dd181A55c9fC82059Fdb2E2c&order_direction=desc&offset=0&limit=20',
+    {
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'
+      }
+    }
   );
   const poapReq = await fetch(
     'https://api.poap.xyz/actions/scan/0xD2eCE15856813709Dd181A55c9fC82059Fdb2E2c'
