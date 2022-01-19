@@ -29,6 +29,7 @@
     "react-icons": "^4.3.1",
     "swr": "^1.1.0",
     "tailwindcss-radix": "^1.5.2",
+    "use-delayed-render": "^0.0.7",
     "zod": "^3.11.6"
   },
   "devDependencies": {
