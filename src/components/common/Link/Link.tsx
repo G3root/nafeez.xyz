@@ -6,21 +6,14 @@ export interface ILinkProps
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
   > {
-  isExternal?: boolean;
   href: string;
   children: React.ReactNode;
 }
 
-export function Link({
-  isExternal,
-  href,
-  children,
-  className,
-  ...rest
-}: ILinkProps) {
+export function Link({ href, children, className, ...rest }: ILinkProps) {
   const className_ =
-    'underline decoration-wavy hover:text-gray-800 dark:hover:text-gray-200 font-bold transition-all';
-  if (isExternal) {
+    'underline decoration-dashed underline-offset-4 hover:text-gray-800 dark:hover:text-gray-200 font-bold transition-all';
+  if (href.startsWith('https://')) {
     return (
       <a href={href} className={clsx(className_, className)} {...rest}>
         {children}

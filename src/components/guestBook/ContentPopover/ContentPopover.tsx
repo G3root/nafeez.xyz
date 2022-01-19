@@ -11,7 +11,7 @@ export function ContentPopover(props: IContentPopoverProps) {
   const [isOpen, setIsOpen] = React.useState(false);
   const { data: session, status } = useSession();
   return (
-    <div className="border-2 border-dashed border-gray-300 rounded p-6 my-4 w-full dark:border-gray-800 ">
+    <div className="border-2 border-dashed border-gray-300 rounded p-6 my-4 w-full dark:border-gray-700 ">
       <h5 className="text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100 ">
         Share a message for a future visitor of my site.
       </h5>

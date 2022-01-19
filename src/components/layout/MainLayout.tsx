@@ -10,7 +10,7 @@ export function MainLayout({ children }: IMainLayoutProps) {
       <Navbar />
       <main
         id="skip"
-        className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900"
+        className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900 mb-8"
       >
         {children}
       </main>

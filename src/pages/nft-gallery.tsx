@@ -4,7 +4,6 @@ import type { OpenSeaAsset } from '@/types/opensea';
 import type { PoapAsset } from '@/types/poap';
 import {
   NFTAccordian,
-  NftCard,
   AccordianRoot,
   WalletAddressButton
 } from '@/components/nft-gallery';

@@ -18,10 +18,7 @@ const Home: NextPage = () => {
             Hey, I’m Nafees Nazik, a Sri Lanka based software developer. I
             specialise in React and javascript ecosystem, which are mainly open
             source and publicly available on my{' '}
-            <Link href="https://github.com/G3root" isExternal>
-              GitHub
-            </Link>
-            .
+            <Link href="https://github.com/G3root">GitHub</Link>.
           </p>
           <div className="flex items-center mt-5 space-x-4">
             <IconLink
