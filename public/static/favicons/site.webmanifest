@@ -1,11 +1,16 @@
 {
     "name": "Nafees Nazik",
-    "short_name": "nafees.xyz",
+    "short_name": "nafeez.xyz",
     "description": "developer",
     "icons": [
         {
             "src": "/static/favicons/android-chrome-192x192.png",
             "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/favicons/android-chrome-256x256.png",
+            "sizes": "256x256",
             "type": "image/png"
         },
         {
