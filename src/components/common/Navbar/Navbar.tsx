@@ -15,9 +15,7 @@ export function Navbar(props: INavbarProps) {
             Skip to content
           </a>
           <Link passHref href="/">
-            <Toolbar.Link className="font-semibold px-2 py-1 md:block hidden rounded-lg text-3xl hover:bg-gray-200 dark:hover:bg-gray-800 transition-all">
-              N
-            </Toolbar.Link>
+            <Toolbar.Link className="font-semibold h-11 w-11 md:block hidden rounded-full text-3xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 "></Toolbar.Link>
           </Link>
           <MobileNav />
           <div className="ml-[-0.60rem]">
