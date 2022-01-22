@@ -11,7 +11,7 @@ export function WalletAddressButton(props: IWalletAddressButtonProps) {
       onClick={() => {
         copy(walletAddress);
       }}
-      className="inline-flex items-center py-px px-2 bg-gray-800 rounded-md shadow-sm text-sm"
+      className="inline-flex items-center py-px px-2 dark:bg-gray-800 bg-gray-200 rounded-md shadow-sm text-sm"
       aria-label="copy wallet address to clipboard"
       title={walletAddress}
     >
