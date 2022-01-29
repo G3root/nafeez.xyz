@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { format } from 'date-fns';
-import { useSession } from '@/hooks/auth';
+import { useSession } from 'next-auth/react';
 import { useGuestbookEntries } from '@/hooks/dataFetch';
 export interface IGuestBookContentProps {
   data: {

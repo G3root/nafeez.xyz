@@ -2,6 +2,7 @@ import { LoadingSpinner } from '@/components/common';
 import clsx from 'clsx';
 import * as React from 'react';
 import useSWR, { useSWRConfig } from 'swr';
+import { signOut } from 'next-auth/react';
 import toast from 'react-hot-toast';
 export interface IContentInputProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -81,6 +82,14 @@ export function ContentInput({ setIsOpen }: IContentInputProps) {
           )}
         </button>
       </form>
+      <button
+        onClick={() => {
+          signOut();
+        }}
+        className="mt-2 w-full rounded bg-red-200 px-3 py-1 font-medium ring-red-300 transition-all hover:ring-2 dark:bg-red-600"
+      >
+        Log out
+      </button>
     </div>
   );
 }
