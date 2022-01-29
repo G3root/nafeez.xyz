@@ -33,7 +33,7 @@ export function GuestBookContent({ data }: IGuestBookContentProps) {
         {entries?.data &&
           entries.data.map((entry) => (
             <div key={entry.id}>
-              <div className="flex min-h-[5rem] space-x-3 border-b border-gray-100 py-3 px-3.5 text-sm dark:border-gray-900 sm:hover:bg-gray-200 sm:hover:dark:bg-gray-800 lg:rounded-lg lg:border-none lg:py-2">
+              <div className="flex min-h-[5rem] space-x-3 border-b border-gray-100 bg-gray-200 py-3 px-3.5 text-sm dark:border-gray-900 dark:bg-gray-800 lg:rounded-lg lg:border-none lg:py-2">
                 <div className="flex flex-col justify-center space-y-1">
                   <div className="text-base  font-medium ">{entry.body}</div>
                   <div className="text-gray-600 text-opacity-80 line-clamp-1 dark:text-white">
