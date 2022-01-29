@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "studio": "prisma studio"
+    "studio": "prisma studio",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "dependencies": {
     "@prisma/client": "^3.8.1",
@@ -39,6 +40,8 @@
     "eslint-config-next": "12.0.8",
     "next-sitemap": "^1.9.12",
     "postcss": "^8.4.4",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.4",
     "prisma": "^3.8.1",
     "tailwindcss": "^3.0.15",
     "typescript": "4.5.4"

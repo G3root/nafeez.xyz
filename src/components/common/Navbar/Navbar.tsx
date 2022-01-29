@@ -10,12 +10,12 @@ export function Navbar(props: INavbarProps) {
   return (
     <Toolbar.Root>
       <div className="flex flex-col justify-center px-8">
-        <nav className="flex max-w-7xl items-center justify-between w-full relative  border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-gray-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
+        <nav className="relative mx-auto flex w-full max-w-7xl items-center  justify-between border-gray-200 bg-gray-50 bg-opacity-60 pt-8 pb-8  text-gray-900 dark:border-gray-700  dark:bg-gray-900 dark:text-gray-100 sm:pb-16">
           <a href="#skip" className="skip-nav">
             Skip to content
           </a>
           <Link passHref href="/">
-            <Toolbar.Link className="font-semibold h-11 w-11 md:block hidden rounded-full text-3xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 "></Toolbar.Link>
+            <Toolbar.Link className="hidden h-11 w-11 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-3xl font-semibold md:block "></Toolbar.Link>
           </Link>
           <MobileNav />
           <div className="ml-[-0.60rem]">

@@ -11,7 +11,7 @@ export interface IIconLinkProps
 
 export function IconLink({ children, className, ...rest }: IIconLinkProps) {
   return (
-    <a className={clsx('rounded-lg  transition-all p-2', className)} {...rest}>
+    <a className={clsx('rounded-lg  p-2 transition-all', className)} {...rest}>
       {children}
     </a>
   );

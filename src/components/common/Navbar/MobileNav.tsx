@@ -46,15 +46,15 @@ export function MobileNav(props: IMobileNavProps) {
   const navItems = items.map((item) => (
     <li
       key={item.name}
-      className="w-full text-base my-2 "
+      className="my-2 w-full text-base "
       style={{ transitionDelay: item.delay }}
     >
       <NextLink href={item.url}>
         <a
           className={clsx(
-            'flex items-center w-auto py-3 mx-4 rounded-md  transition-all',
+            'mx-4 flex w-auto items-center rounded-md py-3  transition-all',
             path === item.url
-              ? 'bg-gray-200 dark:bg-gray-800 font-semibold text-gray-800 dark:text-gray-200 '
+              ? 'bg-gray-200 font-semibold text-gray-800 dark:bg-gray-800 dark:text-gray-200 '
               : 'font-normal text-gray-600 dark:text-gray-400'
           )}
         >
@@ -69,14 +69,14 @@ export function MobileNav(props: IMobileNavProps) {
       <Toolbar.Button asChild>
         <Dialog.Trigger
           aria-label="Toggle menu"
-          className="w-9 h-9  md:hidden flex items-center justify-center   bg-transparent"
+          className="flex h-9  w-9 items-center justify-center bg-transparent   md:hidden"
         >
           <FiMenu aria-hidden className="h-5 w-5 " />
         </Dialog.Trigger>
       </Toolbar.Button>
       <Dialog.Portal>
         <Dialog.Overlay className="absolute inset-0 bg-gray-800 bg-opacity-75 " />
-        <Dialog.Content className="fixed top-0 bottom-0 w-72 left-0">
+        <Dialog.Content className="fixed top-0 bottom-0 left-0 w-72">
           <div className="absolute inset-0 bg-gray-100 dark:bg-gray-900 ">
             {isMenuMounted ? (
               <ul
@@ -90,7 +90,7 @@ export function MobileNav(props: IMobileNavProps) {
               </ul>
             ) : null}
           </div>
-          <Dialog.DialogClose className="top-8 left-3 ml-5 absolute flex items-center justify-center rounded-full w-9 h-9 hover:bg-gray-200 dark:hover:bg-gray-800">
+          <Dialog.DialogClose className="absolute top-8 left-3 ml-5 flex h-9 w-9 items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-gray-800">
             <FiX aria-hidden className="h-5 w-5 " />
           </Dialog.DialogClose>
         </Dialog.Content>

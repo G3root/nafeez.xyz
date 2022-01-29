@@ -7,7 +7,7 @@ export function LoadingSpinner({ className, ...rest }: ILoadingSpinnerProps) {
   return (
     <svg
       className={clsx(
-        'animate-spin h-5 w-5 text-gray-900 dark:text-gray-100',
+        'h-5 w-5 animate-spin text-gray-900 dark:text-gray-100',
         className
       )}
       xmlns="http://www.w3.org/2000/svg"

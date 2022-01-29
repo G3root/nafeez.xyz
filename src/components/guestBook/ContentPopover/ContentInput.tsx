@@ -44,7 +44,7 @@ export function ContentInput({ setIsOpen }: IContentInputProps) {
   };
   return (
     <div className="flex flex-col ">
-      <h2 className="font-bold text-lg">Sign a message</h2>
+      <h2 className="text-lg font-bold">Sign a message</h2>
       <form
         className="flex flex-col items-center space-y-3"
         onSubmit={onSubmit}
@@ -53,7 +53,7 @@ export function ContentInput({ setIsOpen }: IContentInputProps) {
           Your Message
         </label>
         <textarea
-          className="text-sm dark:bg-gray-800 dark:text-white shadow-sm border border-gray-300 rounded-md focus:ring-gray-500 focus:border-gray-500 dark:focus:ring-gray-300 dark:focus:border-gray-300"
+          className="rounded-md border border-gray-300 text-sm shadow-sm focus:border-gray-500 focus:ring-gray-500 dark:bg-gray-800 dark:text-white dark:focus:border-gray-300 dark:focus:ring-gray-300"
           ref={inputEl}
           aria-label="Your message"
           placeholder="Your message..."
@@ -66,10 +66,10 @@ export function ContentInput({ setIsOpen }: IContentInputProps) {
           type="submit"
           disabled={form === Form.Loading ? true : false}
           className={clsx(
-            'font-medium bg-gray-200 dark:bg-gray-600 rounded px-3 py-1 w-full ',
+            'w-full rounded bg-gray-200 px-3 py-1 font-medium dark:bg-gray-600 ',
             form === Form.Loading
               ? 'cursor-not-allowed'
-              : 'hover:ring-2 ring-gray-300 transition-all'
+              : 'ring-gray-300 transition-all hover:ring-2'
           )}
         >
           {form === Form.Loading ? (

@@ -46,7 +46,7 @@ export function MainLayout({ children, ...customMeta }: IMainLayoutProps) {
       <Navbar />
       <main
         id="skip"
-        className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900 mb-8"
+        className="mb-8 flex flex-col justify-center bg-gray-50 px-8 dark:bg-gray-900"
       >
         {children}
       </main>

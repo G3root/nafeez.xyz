@@ -11,18 +11,18 @@ export function ContentPopover(props: IContentPopoverProps) {
   const [isOpen, setIsOpen] = React.useState(false);
   const { data: session, status } = useSession();
   return (
-    <div className="border-2 border-dashed border-gray-300 rounded p-6 my-4 w-full dark:border-gray-700 ">
-      <h5 className="text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100 ">
+    <div className="my-4 w-full rounded border-2 border-dashed border-gray-300 p-6 dark:border-gray-700 ">
+      <h5 className="text-lg font-bold text-gray-900 dark:text-gray-100 md:text-xl ">
         Share a message for a future visitor of my site.
       </h5>
 
       <PopoverPrimitive.Root open={isOpen} onOpenChange={setIsOpen}>
-        <PopoverPrimitive.Trigger className="px-4 py-2 my-4  font-bold bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded">
+        <PopoverPrimitive.Trigger className="my-4 rounded bg-gray-200  px-4 py-2 font-bold text-gray-900 dark:bg-gray-700 dark:text-gray-100">
           Sign the Guestbook
         </PopoverPrimitive.Trigger>
 
         <PopoverPrimitive.Content
-          className="rounded-md p-5 bg-gray-50 dark:bg-gray-900 w-64 shadow-xl border border-transparent dark:border-gray-700"
+          className="w-64 rounded-md border border-transparent bg-gray-50 p-5 shadow-xl dark:border-gray-700 dark:bg-gray-900"
           sideOffset={5}
         >
           {status === 'authenticated' ? (
@@ -33,13 +33,13 @@ export function ContentPopover(props: IContentPopoverProps) {
 
           <PopoverPrimitive.Close
             aria-label="Close"
-            className="rounded-full w-6 h-6 inline-flex items-center justify-center absolute top-2 right-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+            className="absolute top-2 right-2 inline-flex h-6 w-6 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
           >
             <FiX className="h-4 w-4" aria-hidden />
           </PopoverPrimitive.Close>
         </PopoverPrimitive.Content>
       </PopoverPrimitive.Root>
-      <p className="text-sm text-gray-800 dark:text-gray-200 max-w-sm">
+      <p className="max-w-sm text-sm text-gray-800 dark:text-gray-200">
         Your information is only used to display your name and reply by email.
       </p>
     </div>

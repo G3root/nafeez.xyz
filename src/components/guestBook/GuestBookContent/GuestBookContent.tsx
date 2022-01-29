@@ -29,15 +29,15 @@ export function GuestBookContent({ data }: IGuestBookContentProps) {
 
   return (
     <div className="mt-4 space-y-8">
-      <div className="grid md:grid-cols-4 grid-cols-1 gap-3">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-4">
         {entries?.data &&
           entries.data.map((entry) => (
             <div key={entry.id}>
-              <div className="flex py-3 min-h-[5rem] lg:py-2 px-3.5 space-x-3 border-b lg:border-none border-gray-100 dark:border-gray-900 text-sm lg:rounded-lg sm:hover:bg-gray-200 sm:hover:dark:bg-gray-800">
+              <div className="flex min-h-[5rem] space-x-3 border-b border-gray-100 py-3 px-3.5 text-sm dark:border-gray-900 sm:hover:bg-gray-200 sm:hover:dark:bg-gray-800 lg:rounded-lg lg:border-none lg:py-2">
                 <div className="flex flex-col justify-center space-y-1">
-                  <div className="font-medium  text-base ">{entry.body}</div>
-                  <div className="line-clamp-1 text-gray-600 dark:text-white text-opacity-80">
-                    <div className="flex items-center space-x-2 mb-2">
+                  <div className="text-base  font-medium ">{entry.body}</div>
+                  <div className="text-gray-600 text-opacity-80 line-clamp-1 dark:text-white">
+                    <div className="mb-2 flex items-center space-x-2">
                       <p className="text-sm text-gray-500">
                         {entry.createdBy} /{' '}
                         {format(

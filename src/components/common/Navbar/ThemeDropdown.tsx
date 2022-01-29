@@ -17,10 +17,10 @@ export function ThemeDropdown(props: IThemeDropdownProps) {
   const radioItems = states.map(({ name, icon }) => (
     <DropdownMenu.RadioItem
       key={name}
-      className="py-1 pl-4 flex items-center cursor-pointer hover:bg-gray-200/50 hover:dark:bg-gray-700 rounded-sm "
+      className="flex cursor-pointer items-center rounded-sm py-1 pl-4 hover:bg-gray-200/50 hover:dark:bg-gray-700 "
       value={name}
     >
-      <DropdownMenu.ItemIndicator className="absolute left-0 w-6 inline-flex items-center justify-center">
+      <DropdownMenu.ItemIndicator className="absolute left-0 inline-flex w-6 items-center justify-center">
         <svg
           width="25"
           height="25"
@@ -47,14 +47,14 @@ export function ThemeDropdown(props: IThemeDropdownProps) {
       <Toolbar.Button asChild>
         <DropdownMenu.Trigger
           aria-label="Switch theme"
-          className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+          className="flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 ring-gray-300  transition-all hover:ring-2  dark:bg-gray-600"
         >
-          <FiMoon aria-hidden className="h-5 w-5 dark:hidden block" />
-          <FiSun aria-hidden className="h-5 w-5 dark:block hidden" />
+          <FiMoon aria-hidden className="block h-5 w-5 dark:hidden" />
+          <FiSun aria-hidden className="hidden h-5 w-5 dark:block" />
         </DropdownMenu.Trigger>
       </Toolbar.Button>
       <DropdownMenu.Content
-        className="w-36 bg-gray-50 dark:bg-gray-800 rounded-md p-1 text-sm font-medium shadow-lg overflow-hidden"
+        className="w-36 overflow-hidden rounded-md bg-gray-50 p-1 text-sm font-medium shadow-lg dark:bg-gray-800"
         sideOffset={5}
       >
         <DropdownMenu.RadioGroup value={theme} onValueChange={onChange}>

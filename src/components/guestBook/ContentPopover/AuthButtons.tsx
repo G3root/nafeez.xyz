@@ -28,15 +28,15 @@ export function AuthButtons(props: IAuthButtonsProps) {
   );
   return (
     <div className="flex flex-col ">
-      <h2 className="font-bold text-lg">Login with</h2>
-      <div className="flex items-center space-x-3 mt-6">
+      <h2 className="text-lg font-bold">Login with</h2>
+      <div className="mt-6 flex items-center space-x-3">
         {buttons.map(({ label, icon, handler }) => (
           <div
             key={label}
-            className="w-full dark:bg-gray-600 bg-gray-200 p-2 rounded-lg hover:ring-2 ring-gray-300 transition-all"
+            className="w-full rounded-lg bg-gray-200 p-2 ring-gray-300 transition-all hover:ring-2 dark:bg-gray-600"
           >
             <button
-              className="flex flex-col items-center justify-center w-full font-medium"
+              className="flex w-full flex-col items-center justify-center font-medium"
               onClick={handler}
             >
               {icon}
