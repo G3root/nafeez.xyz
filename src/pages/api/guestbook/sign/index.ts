@@ -36,9 +36,10 @@ export default async function handler(
     }
 
     try {
+      const emailOrName = email ?? name;
       const newEntry = await prisma.guestbook.create({
         data: {
-          email,
+          email: emailOrName,
           body: result.data.message,
           createdBy: name
         }

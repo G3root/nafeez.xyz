@@ -23,7 +23,7 @@ export default async function handler(
     if (!session) {
       return;
     }
-    const { email } = session.user;
+    const { email, name } = session.user;
 
     const result = await GuestBookEntryDeleteSchema.safeParseAsync({
       id: Number(req.query.id)
@@ -47,7 +47,8 @@ export default async function handler(
         .json({ success: false, message: 'an error occured' });
     }
 
-    if (email !== entry.email) {
+    const nameOrEmail = email ?? name;
+    if (nameOrEmail !== entry.email) {
       return res.status(403).json({ success: false, message: 'Unauthorized' });
     }
 
