@@ -1,6 +1,5 @@
 {
     "cleanUrls": true,
-    "trailingSlash": false,
     "headers": [
       {
         "source": "/fonts/Inter-italic.var.woff2",
