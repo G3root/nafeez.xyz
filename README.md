@@ -38,7 +38,8 @@ Create a `.env` file similar to [`.env.example`](https://github.com/G3root/nafee
 
 
 ## Acknowledgements
-- [Lee robinson](https://github.com/leerob)
+- Design from Lee Robinson: https://github.com/leerob/leerob.io/
+- NFT Gallery page inspired by Pedro Duarte: https://ped.ro/
 
 ## Cloning / Forking
 
