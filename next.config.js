@@ -2,6 +2,11 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['storage.opensea.io','assets.poap.xyz',"lh3.googleusercontent.com"],
-  },
-}
+    domains: [
+      'storage.opensea.io',
+      'assets.poap.xyz',
+      'lh3.googleusercontent.com',
+      'openseauserdata.com'
+    ]
+  }
+};
