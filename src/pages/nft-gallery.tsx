@@ -13,19 +13,51 @@ type NftMetadata = {
 };
 
 export const getStaticProps = async () => {
-  const nftReq = await fetch(
-    'https://api.opensea.io/api/v1/assets?owner=0xD2eCE15856813709Dd181A55c9fC82059Fdb2E2c&order_direction=desc&offset=0&limit=20',
-    {
-      headers: {
-        'User-Agent':
-          'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'
-      }
-    }
-  );
+  // const nftReq = await fetch(
+  //   'https://api.opensea.io/api/v1/assets?owner=0xD2eCE15856813709Dd181A55c9fC82059Fdb2E2c',
+  //   {
+  //     headers: {
+  //       'User-Agent':
+  //         'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'
+  //     }
+  //   }
+  // );
   const poapReq = await fetch(
     'https://api.poap.xyz/actions/scan/0xD2eCE15856813709Dd181A55c9fC82059Fdb2E2c'
   );
-  const nftRes: NftMetadata = await nftReq.json();
+  // const nftRes: NftMetadata = await nftReq.json();
+  // hardcoded until i get access to opensea api keys
+  const nftRes: NftMetadata = {
+    assets: [
+      {
+        id: 89124955,
+        image_url:
+          'https://openseauserdata.com/files/e36e30343aeedc3e10ddef62eb8aeb6e.svg',
+        image_original_url: '',
+        image_preview_url:
+          'https://openseauserdata.com/files/e36e30343aeedc3e10ddef62eb8aeb6e.svg',
+        image_thumbnail_url:
+          'https://openseauserdata.com/files/e36e30343aeedc3e10ddef62eb8aeb6e.svg',
+        name: 'Dev #3741',
+        description:
+          'Developers around the world are tired of working and contributing their time and effort to enrich the top 1%. Join the movement that is community owned, building the future from the bottom up.',
+        asset_contract: {
+          name: 'Devs for Revolution'
+        },
+        permalink:
+          'https://opensea.io/assets/ethereum/0x25ed58c027921e14d86380ea2646e3a1b5c55a8b/3741',
+        collection: {
+          image_url:
+            'https://lh3.googleusercontent.com/6Jbode0t_bTO9MHYoYvjIW9nHENCxOs40EGg3Z5ptg4lLlD2z2WXEAIrjyV929aQnIi94hPL4VZ3Pl2NWOO_tSaO6gdjdrcMHrF9=s120',
+
+          name: 'Devs for Revolution',
+
+          slug: 'devs-for-revolution'
+        },
+        token_id: '3741'
+      }
+    ]
+  };
   const poapRes: PoapAsset[] = await poapReq.json();
 
   const nftCollectionBucket: string[] = [];
