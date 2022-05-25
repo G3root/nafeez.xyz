@@ -22,29 +22,33 @@ const Home: NextPage = () => {
           </p>
           <div className="mt-5 flex items-center space-x-4">
             <IconLink
+              aria-label="my twitter account link"
               className="text-blue-600 hover:bg-blue-200 dark:text-blue-400 dark:hover:bg-blue-800"
               href="https://twitter.com/nfs__21"
             >
-              <FiTwitter className="h-5 w-5" />
+              <FiTwitter aria-hidden className="h-5 w-5" />
             </IconLink>
             <IconLink
+              aria-label="my github account link"
               className="text-gray-600 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-800"
               href="https://github.com/G3root"
             >
-              <FiGithub className="h-5 w-5" />
+              <FiGithub aria-hidden className="h-5 w-5" />
             </IconLink>
             <IconLink
+              aria-label="my instagram account link"
               className="text-red-600 hover:bg-red-200 dark:text-red-400 dark:hover:bg-red-800"
               href="https://www.instagram.com/nafees_nazik.21/"
             >
-              <FiInstagram className="h-5 w-5" />
+              <FiInstagram aria-hidden className="h-5 w-5" />
             </IconLink>
 
             <IconLink
+              aria-label="my email address"
               className="text-yellow-600 hover:bg-yellow-200 dark:text-yellow-400 dark:hover:bg-yellow-800"
               href="mailto:nafeesnazik21@gmail.com"
             >
-              <FiMail className="h-5 w-5" />
+              <FiMail aria-hidden className="h-5 w-5" />
             </IconLink>
           </div>
         </div>
